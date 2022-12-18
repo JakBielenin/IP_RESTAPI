@@ -20,4 +20,3 @@ Route::get('bielenin/305345/people/{people}', [PeopleController::class, 'show'])
 Route::post('bielenin/305345/people', [PeopleController::class, 'store']);
 Route::put('bielenin/305345/people/{people}', [PeopleController::class, 'update']);
 Route::delete('bielenin/305345/people/{people}', [PeopleController::class, 'delete']);
-
