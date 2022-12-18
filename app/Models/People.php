@@ -16,4 +16,3 @@ class People extends Model
 
     use HasFactory;
 }
- 
