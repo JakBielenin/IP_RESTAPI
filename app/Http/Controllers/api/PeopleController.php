@@ -37,4 +37,4 @@ class PeopleController extends Controller
     {
         return response()->json($people, 201);
     }
-}
+}aaa
