@@ -31,3 +31,4 @@ class PeopleSeeder extends Seeder
         }
     }
 }
+ 
