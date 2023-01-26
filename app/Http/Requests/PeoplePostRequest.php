@@ -24,7 +24,7 @@ class PeoplePostRequest extends FormRequest
     public function rules()
     {
         return [
-            'first_name' => ['required']
+            
         ];
     }
 }
