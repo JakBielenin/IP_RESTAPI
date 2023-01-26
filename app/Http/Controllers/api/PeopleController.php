@@ -18,23 +18,30 @@ class PeopleController extends Controller
         return response()->json(People::all(), 200);
     }
 
-    public function show(People $people): JsonResponse
+    public function show($people): JsonResponse
     {
+        $people = People::find($people);
+        if (is_null($people)) 
+            return response()->json(Null,204);
+        
         return response()->json($people, 200);
     }
 
-    public function update(People $people): JsonResponse
+    public function update(Request $request, People $people): JsonResponse
     {
-        return response()->json($people, 201);
+        $people->update($request->all());
+        return response()->json($people, 200);
     }
 
     public function delete(People $people): JsonResponse
     {
+        $people->delete();
         return response()->json($people, 204);
     }
 
-    public function store(People $people): JsonResponse
+    public function store(Request $request, People $people): JsonResponse
     {
+        $people = People::create($request->all());
         return response()->json($people, 201);
     }
 }
